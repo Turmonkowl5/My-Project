@@ -28,10 +28,11 @@ public class EnemyMovement : MonoBehaviour
     {
         if (other.CompareTag("PewPew"))
         {
+            Destroy(enemyName);
             Destroy(gameObject);
             Destroy(other.gameObject);
             Instantiate(explosion, transform.position, transform.rotation);
-            Destroy(enemyName);
+            
         }
     }
 }

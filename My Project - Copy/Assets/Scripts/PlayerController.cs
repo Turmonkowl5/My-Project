@@ -14,13 +14,15 @@ public class PlayerController : MonoBehaviour
     private AudioSource playerAudio;
     [SerializeField] GameObject shipMesh;
     [SerializeField] GameObject gameMusic;
-    
+    [SerializeField] float timeToShoot;
+    [SerializeField] float timer;
     
     
     // Start is called before the first frame update
     void Start()
     {
         playerAudio = GetComponent<AudioSource>();
+        timer = Time.time;
         
     }
 
@@ -29,10 +31,20 @@ public class PlayerController : MonoBehaviour
     {
         ConstrainPlayer();
         MovePlayer();
-        
+        timer += Time.deltaTime;
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
-            Shoot();
+            if(timer >= timeToShoot)
+            {
+                Shoot();
+                timer = 0;
+            }
+            else
+            {
+                
+
+            }
+            
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
@@ -61,7 +73,10 @@ public class PlayerController : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.up * speed * verticalInput * Time.deltaTime, Space.World);
         transform.Translate(Vector3.forward * speed * horizontalInput * Time.deltaTime);
+        
     }
+
+
 
     //Constrain Player Movement
     void ConstrainPlayer()
