@@ -29,9 +29,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateTimer();
         ConstrainPlayer();
         MovePlayer();
-        timer += Time.deltaTime;
+        
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
             if(timer >= timeToShoot)
@@ -39,11 +40,7 @@ public class PlayerController : MonoBehaviour
                 Shoot();
                 timer = 0;
             }
-            else
-            {
-                
 
-            }
             
         }
 
@@ -59,6 +56,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void UpdateTimer()
+    {
+        timer += Time.deltaTime;
+
+    }
     void ChangeFieldOfView(int fieldOfView)
     {
        Camera.main.fieldOfView = fieldOfView;

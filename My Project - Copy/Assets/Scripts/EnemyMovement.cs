@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public float speed;
-    private float xBoundry = 60;
+    private float xBoundry = 80;
     public ParticleSystem explosion;
     public GameObject enemyName;
     // Start is called before the first frame update

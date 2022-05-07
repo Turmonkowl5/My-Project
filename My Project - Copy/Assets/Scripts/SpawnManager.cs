@@ -24,7 +24,7 @@ public class SpawnManager : MonoBehaviour
 
         int randomIndex = Random.Range(0, enemy.Length);        
         float randomY = Random.Range(-yRange, yRange);
-        Vector3 randomPos = new Vector3(-55, randomY, 7);
+        Vector3 randomPos = new Vector3(-70, randomY, 7);
         Instantiate(enemy[randomIndex], randomPos, enemy[randomIndex].transform.rotation);
     }
 }
