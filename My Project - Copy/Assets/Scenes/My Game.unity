@@ -1067,7 +1067,7 @@ MonoBehaviour:
   pewpew: {fileID: 6557078701487336825, guid: d4df7d24b32a3314f9d7463b42c5c8c2, type: 3}
   explosion: {fileID: 198000012777718758, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
   pew: {fileID: 8300000, guid: 0bd05763df902854a80475577a26666a, type: 3}
-  expoSound: {fileID: 8300000, guid: 9b713c76b05f8b04882a23a60605b0d2, type: 3}
+  expoSound: {fileID: 8300000, guid: 1fd31868d68903d4f9e2c4a3b7ef98f3, type: 3}
   shipMesh: {fileID: 1129419158}
   gameMusic: {fileID: 2884543}
   timeToShoot: 0.1
@@ -1318,7 +1318,6 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
   - {fileID: 2100000, guid: d4b1c843b5c56f24a9a4964a6864dd49, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1358,7 +1357,7 @@ Transform:
   m_GameObject: {fileID: 1340026805}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 14.1, y: 1, z: 7.78}
+  m_LocalScale: {x: 23.401772, y: 1, z: 14.882362}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1419,7 +1418,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104381928}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.88, y: 0, z: 7}
+  m_LocalPosition: {x: 0, y: 0, z: 7}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 1129419163}
@@ -1658,9 +1657,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy:
-  - {fileID: 9147959161103801436, guid: d3d12fb2cac99684dab63ce2c2873e0e, type: 3}
-  - {fileID: 724112963111085459, guid: 3fce9c8e2ed6c4647ad3896b03db70f1, type: 3}
-  - {fileID: 4868328422647587803, guid: abf87db8070761d42b2e8eb590edbcbc, type: 3}
+  - {fileID: 4644917961459748247, guid: 81809bb93b8b5f14fa4d14b1d6b2d0cf, type: 3}
+  - {fileID: 7316116765407157438, guid: 58af6a21ea98eec4cb82f1d801383781, type: 3}
+  - {fileID: 3768830724443952076, guid: ad4468f1179731541b3acb8dd970ffda, type: 3}
 --- !u!4 &2071157016
 Transform:
   m_ObjectHideFlags: 0

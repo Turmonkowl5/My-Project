@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject gameMusic;
     [SerializeField] float timeToShoot;
     [SerializeField] float timer;
+
+    
+
+    private float lastYVal;
     
     
     // Start is called before the first frame update
@@ -23,7 +27,7 @@ public class PlayerController : MonoBehaviour
     {
         playerAudio = GetComponent<AudioSource>();
         timer = Time.time;
-        
+        lastYVal = transform.position.y;
     }
 
     // Update is called once per frame
@@ -56,6 +60,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
+
     void UpdateTimer()
     {
         timer += Time.deltaTime;
@@ -81,7 +87,7 @@ public class PlayerController : MonoBehaviour
 
 
     //Constrain Player Movement
-    void ConstrainPlayer()
+    void ConstrainPlayer() 
     {
         if (transform.position.y > topBoundry)
         {
@@ -95,9 +101,9 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(-sideBoundry, transform.position.y, transform.position.z);
         }
-        if (transform.position.x > sideBoundry)
+        if (transform.position.x > sideBoundry - 8)
         {
-            transform.position = new Vector3(sideBoundry, transform.position.y, transform.position.z);
+            transform.position = new Vector3(sideBoundry -8, transform.position.y, transform.position.z);
         }
     }
 
